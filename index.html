@@ -1,0 +1,68 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AluraFlix</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <h1>AluraFlix</h1>
+        <h2>Cadastro de Filmes</h1>
+            <form id="registrar-form register-form" action="#" form="tipoGenero">
+                <label for="titulo">Título:</label>
+                <input id="titulo" type="text">
+
+                <div class="full-box">
+                    <label for="duracao">Duração:</label>
+                    <input type="text" id="duracao">
+                </div>
+                <div class="full-box">
+                    <label for="genero">Gênero:</label>
+                    <select form="tipoGenero" id="genero" autofocus name="genero">
+                        <option value=""></option>
+                        <option value="acao">Ação</option>
+                        <option value="comedia">Comédia</option>
+                        <option value="drama">Drama</option>
+                        <option value="romance">Romance</option>
+                        <option value="documentario">Documentário</option>
+                        <option value="terror">Terror</option>
+                        <option value="suspense">Suspense</option>
+                        <option value="ficcao">Ficção científica</option>
+                    </select>
+                </div>
+                <div class="full-box spacing">
+                    <label for="classificacao">Classificação indicativa:</label>
+                    <input type="number" id="classificacao">
+                </div>
+                <div class="full-box spacing">
+                    <label for="lancamento">Data de lançamento:</label>
+                    <input type="date" id="lancamento">
+                </div>
+                <button onclick="filme.salvar()" class="full-box">Salvar</button>
+                <button onclick="filme.cancelar()" class="full-box">Cancelar</button>
+            </form>
+
+            <div class="full-box">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Filme</th>
+                        <th>Duração</th>
+                        <th>Gênero</th>
+                        <th class="center">Classificação indicativa</th>
+                        <th class="center">Data de lançamento</th>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+    </div>
+    <p class="error-validation template"></p>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
